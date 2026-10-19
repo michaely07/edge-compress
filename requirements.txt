@@ -1,0 +1,16 @@
+# PyTorch stack (torchao releases track torch releases; install versions that match)
+torch>=2.6
+torchvision>=0.21
+torchao>=0.13          # PT2E quantization lives in torchao.quantization.pt2e
+torch-pruning>=1.5
+# triton ships with Linux CUDA builds of torch; on Windows use `triton-windows` for TRITON_INTERPRET=1 tests
+
+# analysis, data, export
+numpy
+matplotlib
+pillow
+imagehash
+onnx
+onnxruntime
+onnxscript
+pytest

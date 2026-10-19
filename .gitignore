@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# large or regenerable artifacts (results/*.json and figures/ ARE committed)
+data/
+checkpoints/
+logits/
+logs/
+runs/
+*.pt
+*.pt2
+*.onnx
+*.sizetmp
+results/**/*.tmp
+triton_kd/ir_dump/
