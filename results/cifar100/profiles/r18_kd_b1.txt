@@ -1,0 +1,15 @@
+------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                      Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+            mkldnn::_convolution_pointwise        55.74%      88.181ms        56.24%      88.977ms     148.294us           600  
+           mkldnn::_convolution_pointwise_        31.85%      50.384ms        31.85%      50.384ms     125.960us           400  
+           ## Call CompiledFxGraph None ##         5.27%       8.334ms        94.16%     148.964ms       2.979ms            50  
+                  TorchDynamo Cache Lookup         3.46%       5.467ms         3.46%       5.467ms     109.343us            50  
+                Torch-Compiled Region: 0/0         2.19%       3.470ms        96.54%     152.734ms       3.055ms            50  
+                          mkl::_mkl_linear         0.76%       1.208ms         0.80%       1.270ms      25.391us            50  
+                             aten::resize_         0.31%     486.132us         0.31%     486.132us       0.810us           600  
+                               aten::empty         0.23%     371.090us         0.23%     371.090us       0.571us           650  
+    AOTDispatcher Runtime Wrapper Prologue         0.15%     241.220us         0.15%     241.220us       4.824us            50  
+                         Pregraph bytecode         0.04%      58.972us         0.04%      58.972us       1.179us            50  
+------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 158.201ms

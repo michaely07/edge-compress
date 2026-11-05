@@ -33,7 +33,7 @@
     "torch_pruning": "1.6.0",
     "triton": "3.9.0"
   },
-  "updated": "2026-11-04T17:56:28",
+  "updated": "2026-11-04T18:46:56",
   "calibration": {
     "temperature": 1.6387430429458618,
     "ece": 0.13438266515731812,
@@ -255,5 +255,29 @@
         "acc": 0.9611235857009888
       }
     ]
+  },
+  "latency": {
+    "cpu": "Intel(R) Core(TM) Ultra 9 275HX",
+    "threads": 4,
+    "measured_on_seed": 0,
+    "torch": "2.15.0+cu132",
+    "compiled": true,
+    "b1_median_ms": 0.6589094991795719,
+    "b1_p90_ms": 0.7830670001567341,
+    "b32_median_ms": 4.872720999628655,
+    "b32_throughput_ips": 6567.172633614502,
+    "compiled_b32": true
+  },
+  "bench_env": {
+    "python": "3.14.4",
+    "torch": "2.15.0+cu132",
+    "os": "Linux 6.6.87.2-microsoft-standard-WSL2",
+    "cpu": "Intel(R) Core(TM) Ultra 9 275HX",
+    "cpu_vnni": true,
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "torchvision": "0.29.2+cu132",
+    "torchao": "0.18.0",
+    "torch_pruning": "1.6.0",
+    "triton": "3.9.0"
   }
 }

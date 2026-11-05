@@ -1,0 +1,22 @@
+------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                      Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                   onednn::qconv_pointwise        46.27%      28.175ms        47.67%      29.030ms      48.383us           600  
+                 onednn::qconv2d_pointwise        29.98%      18.257ms        33.12%      20.166ms      50.415us           400  
+           ## Call CompiledFxGraph None ##        11.16%       6.797ms        94.25%      57.391ms       1.148ms            50  
+                  TorchDynamo Cache Lookup         2.90%       1.764ms         2.90%       1.764ms      35.278us            50  
+                Torch-Compiled Region: 0/0         2.59%       1.576ms        97.10%      59.130ms       1.183ms            50  
+                 onednn::qlinear_pointwise         1.96%       1.194ms         2.30%       1.398ms      27.964us            50  
+                               aten::copy_         1.63%     989.716us         1.63%     989.716us       2.474us           400  
+                                aten::item         0.82%     500.080us         1.24%     753.432us       0.359us          2100  
+                               aten::empty         0.62%     380.381us         0.62%     380.381us       0.585us           650  
+                               aten::clone         0.61%     369.539us         2.64%       1.607ms       4.016us           400  
+                 aten::_local_scalar_dense         0.42%     253.352us         0.42%     253.352us       0.121us          2100  
+                       aten::empty_strided         0.41%     247.250us         0.41%     247.250us       0.618us           400  
+    AOTDispatcher Runtime Wrapper Prologue         0.21%     127.427us         0.21%     127.427us       2.549us            50  
+                                aten::view         0.20%     124.096us         0.20%     124.096us       2.482us            50  
+                                  aten::to         0.13%      79.181us         0.13%      79.181us       0.079us          1000  
+                         Pregraph bytecode         0.06%      35.348us         0.06%      35.348us       0.707us            50  
+                             aten::reshape         0.04%      24.659us         0.24%     148.755us       2.975us            50  
+------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 60.894ms
